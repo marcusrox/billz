@@ -28,9 +28,10 @@ export default function Contas() {
         <StatusBar />
         <Text>Contas!!!</Text>
         <FlatList
-            data={contas}
-            renderItem={({item}) => <Text>{item.nome}</Text>}
-            keyExtractor={({id}) => String(id)}
+          data={contas}
+          removeClippedSubviews={false}
+          renderItem={({ item }) => <Text>{item.nome}</Text>}
+          keyExtractor={({ id }) => String(id)}
         />
       </SafeAreaView>
     );
