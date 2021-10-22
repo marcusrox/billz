@@ -22,11 +22,12 @@ export default function App() {
       >
         <Stack.Screen name="UserList" 
             component={UserList} 
-            options={() => { 
+            options={({navigation}) => { 
                 return {
-                  title: "Formulário de Usuário",
+                  title: "Lista de Usuários",
                   headerRight: () => (
                     <Button
+                      onPress={() => navigation.navigate('UserForm')}
                       type="clear"
                       icon={<Icon name="add" size={25} color="#FFF" />}
                     />
