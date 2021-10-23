@@ -10,7 +10,7 @@ export default props => {
           { 
               text: "Sim" ,
               onPress() {
-                  console.warn("Excluir usuário " + user.name);
+                  console.warn("Excluir usuário " + user.avatarUrl);
               }
         },
           { text: "Não" },
@@ -31,7 +31,7 @@ export default props => {
               />
             }
           >
-            <Avatar source={{ uri: user.avatarUrl }} />
+            <Avatar key={user.id} rounded source={{ uri: user.avatarUrl }} />
             <ListItem.Content>
               <ListItem.Title>{user.name}</ListItem.Title>
               <ListItem.Subtitle>{user.email}</ListItem.Subtitle>
